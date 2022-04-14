@@ -1,21 +1,12 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <!-- 路由渲染组件, -->
-  <router-view/>
+  <div>
+    <router-link to="/auth"></router-link>
+    <!-- 渲染对应路由的组件 -->
+    <router-view/>
+  </div>
 </template>
 
-<script>
-  export default {
-    data () {
-      return {
-        
-      }
-    }
-  }
-</script>
+
 
 <style lang="scss">
 

@@ -1,0 +1,21 @@
+.auth {
+  .title-info {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 20px;
+  }
+
+  .form {
+    width: 500px;
+    margin: 0 auto;
+    .item {
+      width: 400px;
+      margin-top: 10px;
+      button{
+        width: 100%;
+      }
+    }
+  }
+}
+
+
