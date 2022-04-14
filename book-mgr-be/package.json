@@ -1,0 +1,15 @@
+{
+  "name": "book-mgr-be",
+  "version": "1.0.0",
+  "description": "毕设服务端",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "charles",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.4",
+    "mongoose": "^6.2.10"
+  }
+}
