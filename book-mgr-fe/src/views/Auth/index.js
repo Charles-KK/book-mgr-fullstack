@@ -4,6 +4,8 @@ import { UserOutlined, LockOutlined} from '@ant-design/icons-vue';
 import { auth } from '@/service';
 import { message } from 'ant-design-vue';
 import { result } from '@/utils/result'
+
+
 export default defineComponent({
   components: {
     UserOutlined,
@@ -14,21 +16,25 @@ export default defineComponent({
     const regForm = reactive({
       account: '',
       password: '',
+      code:''
     })
     // 调用axios返回的是promise对象，所以这个函数应该是async
     const register = async () => {
-      // console.log(regForm);
-      // if(regForm.account === '') {
-      //   message.error('账户名不能为空');
-      //   return;
-      // }
-      // if(regForm.password === '') {
-      //   message.error('密码不能为空')
-      //   return;
-      // }
+      console.log(regForm);
+      if(regForm.account === '') {
+        message.error('账户名不能为空');
+        return;
+      }
+      if(regForm.password === '') {
+        message.error('密码不能为空')
+        return;
+      }
+      if(regForm.code === '') {
+        message.error('邀请码不能为空')
+        return;
+      }
 
-
-      const res = await auth.register(regForm.account, regForm.password)
+      const res = await auth.register(regForm.account, regForm.password, regForm.code)
       
       const { data } = res;
     
@@ -48,6 +54,7 @@ export default defineComponent({
       account: '',
       password: '',
     })
+    // 登录逻辑
     const login = async () => {
       // console.log(loginForm);
       if(loginForm.account === '') {

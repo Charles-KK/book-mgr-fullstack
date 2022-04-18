@@ -21,5 +21,3 @@ module.exports = {
   // a
 
 }
-
-console.log('123');

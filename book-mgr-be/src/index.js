@@ -1,8 +1,9 @@
 const Koa = require('koa');
-// 先执行db后续路由才能拿到user.model
 const koaBody = require('koa-body')
 const { connect }  = require('./db/index')
+// 先执行db后续路由才能拿到user.model
 const authRouters = require('./routers/index')
+const inviteRouters = require('./routers/index')
 const cors = require('@koa/cors')
 
 const app = new Koa();
@@ -21,7 +22,7 @@ connect().then(() => {
   // 在路由触发到时要处理好请求体的解析
   app.use(koaBody())
   authRouters(app)
-
+  inviteRouters(app)
   // start http service, (broser default pn=80, https default pn=443)
   app.listen(3000,() => {
     console.log('服务启动成功');

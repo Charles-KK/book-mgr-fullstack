@@ -43,7 +43,7 @@
             </a-input>
           </div>
           <div class="item">
-            <a-input placeholder="邀请码"></a-input>
+            <a-input placeholder="邀请码" v-model:value="regForm.code"></a-input>
           </div>
           <div class="item">
             <a-button type="primary" @click="register">注册</a-button>
