@@ -9,21 +9,21 @@
       <a-tabs>
         <a-tab-pane key="1" tab="登录">
           <div class="item">
-            <a-input placeholder="账号">  
+            <a-input placeholder="账号" v-model:value="loginForm.account">  
               <template #prefix>
                 <UserOutlined />
               </template>
           </a-input>
           </div>
           <div class="item">
-            <a-input placeholder="密码">
+            <a-input placeholder="密码" v-model:value="loginForm.password">
               <template #prefix>
                 <LockOutlined />
               </template>
             </a-input>
           </div>
           <div class="item">
-            <a-button type="primary">登录</a-button>
+            <a-button type="primary" @click="login">登录</a-button>
           </div>
           <div class="item"><a ref="javascript:;">忘记密码</a></div>
         </a-tab-pane>

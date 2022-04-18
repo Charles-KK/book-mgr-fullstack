@@ -2,13 +2,13 @@
 import axios from "axios"
 
 export const register = (account, password) => {
-  axios.post('http://localhost:3000/auth/register',{
-    account, password
-  })
+ return axios.post('http://localhost:3000/auth/register',{
+  account, password
+})
 }
 
 export const login = (account, password) => {
-  axios.post('http://localhost:3000/auth/login',{
+  return axios.post('http://localhost:3000/auth/login',{
     account, password
   })
 }
