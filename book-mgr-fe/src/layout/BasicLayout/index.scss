@@ -1,0 +1,62 @@
+.wrap {
+  .header-placeholder{
+    height: 65px;
+  }
+  .header{
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    
+    width: 100%;
+    box-shadow: 0 2px 8px #eee;
+    z-index: 1;
+    .left{
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      img {
+        height: 60px;
+        margin-right:5px ;
+      }
+      .title {
+        font-size: 20px;
+      }
+    }
+    .right{
+      display: flex;
+      align-items: center;
+      .log-out{
+        width: 80px;
+        text-align: center;
+        cursor: pointer;
+        margin-left: 10px;
+        // 伪类
+        &:hover {
+          background-color : #eee;
+        }
+      }
+    }
+  }
+  .content {
+    display: flex;
+    height: 100%;
+    .left{
+      background: #bfa;
+      width: 260px;
+      position: fixed;
+      top: 65px;
+      bottom: 0;
+    }
+    .right {
+      // 占满剩余空间
+      margin-left: 260px;
+      padding: 15px;
+      flex: 1;
+    }
+  }
+}
