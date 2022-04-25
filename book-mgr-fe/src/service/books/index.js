@@ -7,7 +7,13 @@ export const add = (addForm) => {
   addForm
 )
 }
-export const list = () => {
-  return axios.get('http://localhost:3000/books/list')
+export const list = (data) => {
+  return axios.get('http://localhost:3000/books/list',
+  {
+    params: data
+  })
+ }
+export const remove = (id) => {
+  return axios.delete(`http://localhost:3000/books/${id}`)
  }
  
