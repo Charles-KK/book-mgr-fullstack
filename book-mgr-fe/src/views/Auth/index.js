@@ -3,7 +3,7 @@ import { UserOutlined, LockOutlined} from '@ant-design/icons-vue';
 // 导入auth网络请求
 import { auth } from '@/service';
 import { message } from 'ant-design-vue';
-import { result } from '@/utils/result'
+import { result } from '@/utils'
 
 
 export default defineComponent({

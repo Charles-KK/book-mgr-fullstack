@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 require('./Schemas/User')
-require('./Schemas/inviteCode')
-
+require('./Schemas/InviteCode')
+require('./Schemas/Book')
 const connect = () => {
   return new Promise((resolve) => {
     // mongoose的connect方法 => 

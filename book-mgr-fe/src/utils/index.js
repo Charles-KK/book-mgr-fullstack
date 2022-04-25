@@ -25,3 +25,15 @@ export const result = (response, autoShowError = true) => {
     }
   }
 }
+
+export const deepClone = (obj) => {
+  return JSON.parse(JSON.stringify(obj));
+}
+
+export const formatTime = (ts) => {
+  const date = new Date(Number(ts));
+  const Year = date.getFullYear();
+  const Month = date.getMonth() + 1;
+  const Day = date.getDate();
+  return `${Year}/${Month}/${Day}`
+}
